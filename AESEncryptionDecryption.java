@@ -10,7 +10,7 @@ import java.util.Base64;
 import java.io.UnsupportedEncodingException;
 import java.util.*;
 
-public class Main {
+public class AESEncryptionDecryption {
 
   private static final int KEY_LENGTH = 256;
   private static final int ITERATION_COUNT = 65536;
