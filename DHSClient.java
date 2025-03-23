@@ -1,7 +1,7 @@
 import java.net.*;
 import java.io.*;
 
-public class DHClient {
+public class DHSClient {
     public static void main(String[] args) {
         try {
             String pstr, gstr, Astr;
