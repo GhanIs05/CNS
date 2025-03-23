@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Main
+public class CeaserCipher
 {
     // Encrypts text using a shift of s
     public static StringBuffer encrypt(String text, int s)
