@@ -25,7 +25,7 @@ public class CreatingDigitalSignature {
  Signature sign = Signature.getInstance("SHA256withDSA");
 
  sign.initSign(privKey);
- byte[] bytes = "msg".getBytes();
+ byte[] bytes = msg.getBytes();
 
  sign.update(bytes);
 
