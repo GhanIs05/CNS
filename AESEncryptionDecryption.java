@@ -39,7 +39,6 @@ public class AESEncryptionDecryption {
 
         return Base64.getEncoder().encodeToString(encryptedData);
     } catch (Exception e) {
-        // Handle the exception properly
         e.printStackTrace();
         return null;
     }
@@ -67,23 +66,19 @@ public class AESEncryptionDecryption {
         byte[] decryptedText = cipher.doFinal(cipherText);
         return new String(decryptedText, "UTF-8");
     } catch (Exception e) {
-        // Handle the exception properly
         e.printStackTrace();
         return null;
     }
   }
   public static void main(String[] args) {
 
-    // Define your secret key and salt (keep these secure and don't hardcode in production)
     String secretKey = "MySecretKey";
     String salt = "MySalt";
 
-    // String to be encrypted
     System.out.print("Enter text: ");
     Scanner sc = new Scanner(System.in);
     String originalString = sc.nextLine();
 
-    // Encrypt the string
     String encryptedString = Main.encrypt(originalString, secretKey, salt);
     if (encryptedString != null) {
         System.out.println("Original Text: "+originalString);
@@ -93,7 +88,6 @@ public class AESEncryptionDecryption {
         return;
     }
 
-    // Decrypt the string
     String decryptedString = Main.decrypt(encryptedString, secretKey, salt);
     if (decryptedString != null) {
         System.out.println("Decrypted: " + decryptedString);
