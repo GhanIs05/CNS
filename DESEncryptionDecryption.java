@@ -12,16 +12,13 @@ public class DESEncryptionDecryption {
         String textToEncrypt = sc.nextLine();
         System.out.println("Original Text: " + textToEncrypt);
 
-        // Generate a DES key
         KeyGenerator keyGenerator = KeyGenerator.getInstance("DES");
-        keyGenerator.init(56); // DES uses a 56-bit key size
+        keyGenerator.init(56); 
         SecretKey secretKey = keyGenerator.generateKey();
 
-        // Encrypt the text
         String encryptedText = encrypt(textToEncrypt, secretKey);
         System.out.println("Encrypted Text: " + encryptedText);
 
-        // Decrypt the text
         String decryptedText = decrypt(encryptedText, secretKey);
         System.out.println("Decrypted Text: " + decryptedText);
     }
